@@ -5,12 +5,19 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
+- stage: Build
+  condition: not(eq(variables['build.sourceBranch'], 'refs/heads/master'))
+  jobs:
+    - job: Build
+      displayName: 'Build Solution'
+      steps:
+        - script: npx vsce package
+          displayName: 'Package'
 - stage: Publish
-  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
+  condition: eq(variables['build.sourceBranch'], 'refs/heads/master')
   jobs:
     - job: Publish
       displayName: "Publish"
-      condition: succeeded()
       steps:
         - script: npx vsce package
           displayName: 'Package'
