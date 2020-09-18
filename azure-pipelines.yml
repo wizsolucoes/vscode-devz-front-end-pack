@@ -1,0 +1,18 @@
+trigger:
+  batch: 'true'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Publish
+  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
+  jobs:
+    - job: Publish
+      displayName: "Publish"
+      condition: succeeded()
+      steps:
+        - script: npx vsce package
+          displayName: 'Package'
+        - script: npx vsce publish -p $(VS_MARKETPLACE_TOKEN)
+          displayName: 'Publish'
