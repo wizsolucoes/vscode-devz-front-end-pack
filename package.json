@@ -1,49 +1,50 @@
 {
-    "name": "devz-front-end-pack",
-    "publisher": "WizSolucoes",
-    "displayName": "DevZ - Front-end Pack",
-    "description": "Pacote com extensões do VSCode recomendadas para os DevZs que trabalham com Angular",
-    "version": "1.0.0",
-    "icon": "resources/logo-devz.png",
-    "engines": {
-        "vscode": "^1.49.0"
-    },
-    "categories": [
-        "Extension Packs"
-    ],
-    "galleryBanner": {
-        "color": "#FF9100",
-        "theme": "dark"
-    },
-    "keywords": [
-        "Wiz Soluções",
-        "Wiz",
-        "DevZ",
-        "Front-End"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/wizsolucoes/vscode-devz-front-end-pack"
-    },
-    "homepage": "https://github.com/wizsolucoes/vscode-devz-front-end-pack/blob/master/README.md",
-    "extensionPack": [
-        "WizSolucoes.devz-pack",
-        "johnpapa.Angular2",
-        "Angular.ng-template",
-        "eg2.vscode-npm-script",
-        "ms-vscode.vscode-typescript-tslint-plugin",
-        "infinity1207.angular2-switcher",
-        "GregorBiswanger.json2ts",
-        "ritwickdey.liveserver"
-    ],
-    "devDependencies": {
-        "@commitlint/cli": "^11.0.0",
-        "@commitlint/config-conventional": "^11.0.0",
-        "husky": "^4.3.0"
-    },
-    "husky": {
-        "hooks": {
-          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
+  "name": "devz-front-end-pack",
+  "publisher": "WizSolucoes",
+  "displayName": "DevZ - Front-end Pack",
+  "description": "Pacote com extensões do VSCode recomendadas para os DevZs que trabalham com Angular",
+  "version": "1.0.0",
+  "icon": "resources/logo-devz.png",
+  "engines": {
+    "vscode": "^1.49.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "galleryBanner": {
+    "color": "#FF9100",
+    "theme": "dark"
+  },
+  "keywords": [
+    "Wiz Soluções",
+    "Wiz",
+    "DevZ",
+    "Front-End"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wizsolucoes/vscode-devz-front-end-pack"
+  },
+  "homepage": "https://github.com/wizsolucoes/vscode-devz-front-end-pack/blob/master/README.md",
+  "extensionPack": [
+    "johnpapa.Angular2",
+    "Angular.ng-template",
+    "eg2.vscode-npm-script",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "infinity1207.angular2-switcher",
+    "GregorBiswanger.json2ts",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "sonarsource.sonarlint-vscode"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  }
 }
