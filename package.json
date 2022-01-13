@@ -3,7 +3,7 @@
   "publisher": "WizSolucoes",
   "displayName": "DevZ - Front-end Pack",
   "description": "Pacote com extensões do VSCode recomendadas para os DevZs que trabalham com Angular",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "icon": "resources/logo-devz.png",
   "engines": {
     "vscode": "^1.49.0"
